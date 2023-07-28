@@ -80,7 +80,7 @@ class SbbApplicationTests {
 //        assertEquals(1, this.questionRepository.count());
     	
 //    	답변 테스트
-//    	Optional<Question> oq = this.questionRepository.findById(5);
+//    	Optional<Question> oq = this.questionRepository.findById(2);
 //        assertTrue(oq.isPresent());
 //        Question q = oq.get();
 //
@@ -89,13 +89,13 @@ class SbbApplicationTests {
 //        a.setQuestion(q);  // 어떤 질문의 답변인지 알기위해서 Question 객체가 필요하다.
 //        a.setCreateDate(LocalDateTime.now());
 //        this.answerRepository.save(a);
-    	
+//    	
 //    	Optional<Answer> oa = this.answerRepository.findById(1);
 //        assertTrue(oa.isPresent());
 //        Answer a = oa.get();
 //        assertEquals(5, a.getQuestion().getId());
     	
-    	Optional<Question> oq = this.questionRepository.findById(5);
+    	Optional<Question> oq = this.questionRepository.findById(2);
         assertTrue(oq.isPresent());
         Question q = oq.get();
 
