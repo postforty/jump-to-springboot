@@ -13,95 +13,90 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import jakarta.transaction.Transactional;
 
+
 @SpringBootTest
 class SbbApplicationTests {
-	
-	@Autowired
-	private QuestionRepository questionRepository;
-	
-	@Autowired
-	private AnswerRepository answerRepository;
 
-	@Transactional
-	@Test
-	void testJpa() {
-//		Question q1 = new Question();
-//		q1.setSubject("sbb°¡ ¹«¾ùÀÎ°¡¿ä?");
-//		q1.setContent("sbb¿¡ ´ëÇØ¼­ ¾Ë°í ½Í½À´Ï´Ù.");
-//		q1.setCreateDate(LocalDateTime.now());
-//		this.questionRepository.save(q1);
-//		
-//		Question q2 = new Question();
-//		q2.setSubject("½ºÇÁ¸µºÎÆ® ¸ğµ¨ Áú¹®ÀÔ´Ï´Ù.");
-//		q2.setContent("id´Â ÀÚµ¿À¸·Î »ı¼ºµÇ³ª¿ä?");
-//		q2.setCreateDate(LocalDateTime.now());
-//		this.questionRepository.save(q2);
-		
-//		List<Question> all = this.questionRepository.findAll();
-//		assertEquals(2, all.size()); // assertEquals(±â´ë°ª, ½ÇÁ¦°ª)¿Í °°ÀÌ »ç¿ëÇÏ°í ±â´ë°ª°ú ½ÇÁ¦°ªÀÌ µ¿ÀÏÇÑÁö¸¦ Á¶»ç
-//		
-//		Question q = all.get(0);
-//		assertEquals("sbb°¡ ¹«¾ùÀÎ°¡¿ä?", q.getSubject());
-		
-//		OptionalÀº null Ã³¸®¸¦ À¯¿¬ÇÏ°Ô Ã³¸®ÇÏ±â À§ÇØ »ç¿ëÇÏ´Â Å¬·¡½º·Î À§¿Í °°ÀÌ isPresent·Î nullÀÌ ¾Æ´ÑÁö¸¦ È®ÀÎÇÑ ÈÄ¿¡ getÀ¸·Î ½ÇÁ¦ Question °´Ã¼ °ªÀ» ¾ò¾î¾ß ÇÑ´Ù.
-//		Optional<Question> oq = this.questionRepository.findById(1);
-//		System.out.println(oq.isPresent()); // true
+    @Autowired
+    private QuestionRepository questionRepository;
+    
+    @Autowired
+    private AnswerRepository answerRepository;
+
+    @Transactional
+    @Test
+    void testJpa() {        
+//        Question q1 = new Question();
+//        q1.setSubject("sbbê°€ ë¬´ì—‡ì¸ê°€ìš”?");
+//        q1.setContent("sbbì— ëŒ€í•´ì„œ ì•Œê³  ì‹¶ìŠµë‹ˆë‹¤.");
+//        q1.setCreateDate(LocalDateTime.now());
+//        this.questionRepository.save(q1);  // ì²«ë²ˆì§¸ ì§ˆë¬¸ ì €ì¥
+//
+//        Question q2 = new Question();
+//        q2.setSubject("ìŠ¤í”„ë§ë¶€íŠ¸ ëª¨ë¸ ì§ˆë¬¸ì…ë‹ˆë‹¤.");
+//        q2.setContent("idëŠ” ìë™ìœ¼ë¡œ ìƒì„±ë˜ë‚˜ìš”?");
+//        q2.setCreateDate(LocalDateTime.now());
+//        this.questionRepository.save(q2);  // ë‘ë²ˆì§¸ ì§ˆë¬¸ ì €ì¥
+    	
+//    	List<Question> all = this.questionRepository.findAll();
+//        assertEquals(2, all.size());
+//
+//        Question q = all.get(0);
+//        assertEquals("sbbê°€ ë¬´ì—‡ì¸ê°€ìš”?", q.getSubject());
+    	
+//    	Optional<Question> oq = this.questionRepository.findById(1);
 //        if(oq.isPresent()) {
 //            Question q = oq.get();
-//            assertEquals("sbb°¡ ¹«¾ùÀÎ°¡¿ä?", q.getSubject());
+//            assertEquals("sbbê°€ ë¬´ì—‡ì¸ê°€ìš”?", q.getSubject());
 //        }
-		
-//		Question q = this.questionRepository.findBySubject("sbb°¡ ¹«¾ùÀÎ°¡¿ä?");
+    	
+//    	Question q = this.questionRepository.findBySubject("sbbê°€ ë¬´ì—‡ì¸ê°€ìš”?");
 //        assertEquals(1, q.getId());
-		
-//		 Question q = this.questionRepository.findBySubjectAndContent(
-//	                "sbb°¡ ¹«¾ùÀÎ°¡¿ä?", "sbb¿¡ ´ëÇØ¼­ ¾Ë°í ½Í½À´Ï´Ù.");
-//		 assertEquals(1, q.getId());
-		
-//		List<Question> qList = this.questionRepository.findBySubjectLike("sbb%");
+    	
+//    	Question q = this.questionRepository.findBySubjectAndContent(
+//                "sbbê°€ ë¬´ì—‡ì¸ê°€ìš”?", "sbbì— ëŒ€í•´ì„œ ì•Œê³  ì‹¶ìŠµë‹ˆë‹¤.");
+//        assertEquals(4, q.getId());
+    	
+//    	List<Question> qList = this.questionRepository.findBySubjectLike("sbb%");
 //        Question q = qList.get(0);
-//        assertEquals("sbb°¡ ¹«¾ùÀÎ°¡¿ä?", q.getSubject());
-		
-//		Optional<Question> oq = this.questionRepository.findById(1);
+//        assertEquals("sbbê°€ ë¬´ì—‡ì¸ê°€ìš”?", q.getSubject());
+    	
+//    	Optional<Question> oq = this.questionRepository.findById(4);
 //        assertTrue(oq.isPresent());
 //        Question q = oq.get();
-//        q.setSubject("¼öÁ¤µÈ Á¦¸ñ");
+//        q.setSubject("ìˆ˜ì •ëœ ì œëª©");
 //        this.questionRepository.save(q);
-		
-//		assertEquals(2, this.questionRepository.count());
-//        Optional<Question> oq = this.questionRepository.findById(1);
+    	
+//    	assertEquals(2, this.questionRepository.count());
+//        Optional<Question> oq = this.questionRepository.findById(4);
 //        assertTrue(oq.isPresent());
 //        Question q = oq.get();
 //        this.questionRepository.delete(q);
 //        assertEquals(1, this.questionRepository.count());
-		
-//		´äº¯ µî·Ï
-//		Optional<Question> oq = this.questionRepository.findById(2);
+    	
+//    	ë‹µë³€ í…ŒìŠ¤íŠ¸
+//    	Optional<Question> oq = this.questionRepository.findById(5);
 //        assertTrue(oq.isPresent());
 //        Question q = oq.get();
 //
 //        Answer a = new Answer();
-//        a.setContent("³× ÀÚµ¿À¸·Î »ı¼ºµË´Ï´Ù.");
-//        a.setQuestion(q);  // ¾î¶² Áú¹®ÀÇ ´äº¯ÀÎÁö ¾Ë±âÀ§ÇØ¼­ Question °´Ã¼°¡ ÇÊ¿äÇÏ´Ù.
+//        a.setContent("ë„¤ ìë™ìœ¼ë¡œ ìƒì„±ë©ë‹ˆë‹¤.");
+//        a.setQuestion(q);  // ì–´ë–¤ ì§ˆë¬¸ì˜ ë‹µë³€ì¸ì§€ ì•Œê¸°ìœ„í•´ì„œ Question ê°ì²´ê°€ í•„ìš”í•˜ë‹¤.
 //        a.setCreateDate(LocalDateTime.now());
 //        this.answerRepository.save(a);
-		
-//		´äº¯ Á¶È¸
-//		Optional<Answer> oa = this.answerRepository.findById(1);
+    	
+//    	Optional<Answer> oa = this.answerRepository.findById(1);
 //        assertTrue(oa.isPresent());
 //        Answer a = oa.get();
-//        assertEquals(2, a.getQuestion().getId());
-		
-//        Áú¹®¿¡¼­ ´äº¯ Ã£±â
-		Optional<Question> oq = this.questionRepository.findById(2);
+//        assertEquals(5, a.getQuestion().getId());
+    	
+    	Optional<Question> oq = this.questionRepository.findById(5);
         assertTrue(oq.isPresent());
         Question q = oq.get();
 
         List<Answer> answerList = q.getAnswerList();
 
         assertEquals(1, answerList.size());
-        assertEquals("³× ÀÚµ¿À¸·Î »ı¼ºµË´Ï´Ù.", answerList.get(0).getContent());
-		
-		
-	}
+        assertEquals("ë„¤ ìë™ìœ¼ë¡œ ìƒì„±ë©ë‹ˆë‹¤.", answerList.get(0).getContent());
+    }
 }

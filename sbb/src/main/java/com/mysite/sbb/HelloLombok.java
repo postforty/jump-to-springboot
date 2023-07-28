@@ -13,8 +13,8 @@ public class HelloLombok {
 	private final int lombok;
 	
 	public static void main(String[] args) {
-		HelloLombok helloLombok = new HelloLombok("Çï·Î", 5);
-//		helloLombok.setHello("Çï·Î");
+		HelloLombok helloLombok = new HelloLombok("ï¿½ï¿½ï¿½", 5);
+//		helloLombok.setHello("í—¬ë¡œ");
 //		helloLombok.setLombok(5);
 		
 		System.out.println(helloLombok.getHello());

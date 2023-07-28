@@ -11,6 +11,6 @@ public class MainController {
 	@ResponseBody
 	public String index() {
 		System.out.println("index");
-		return "¾È³çÇÏ¼¼¿ä sbb¿¡ ¿À½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù.";
+		return "ì•ˆë…•í•˜ì„¸ìš” sbbì— ì˜¤ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤.";
 	}
 }
